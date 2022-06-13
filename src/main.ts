@@ -9,7 +9,7 @@ async function bootstrap() {
     options: { port: 30101 },
   });
   await app.startAllMicroservices();
-  await app.listen(30101);
+  await app.listen(3001);
   console.log(`Trendyol Service is running on: ${await app.getUrl()}`);
 }
 bootstrap();
