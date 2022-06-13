@@ -10,6 +10,6 @@ async function bootstrap() {
   });
   await app.startAllMicroservices();
   await app.listen(3101);
-  console.log(`Application is running on: ${await app.getUrl()}`);
+  console.log(`Trendyol Service is running on: ${await app.getUrl()}`);
 }
 bootstrap();

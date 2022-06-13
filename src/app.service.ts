@@ -1,11 +1,20 @@
 import { Injectable } from '@nestjs/common';
+import { HttpService } from '@nestjs/axios';
 
 @Injectable()
 export class AppService {
+  constructor(private httpService: HttpService) {}
   getHello(): string {
     return 'Hello World!';
   }
-  testAccount(body): string {
-    return 'Hello World! Tendyol testAccount';
+  async testAccount(body): Promise<any> {
+    const response = await this.sendToEndpoint('http://trendyol.com/');
+    return response.toString();
   }
+
+  async sendToEndpoint(endPoint): Promise<any> {
+    const response = await this.httpService.post(endPoint).toPromise();
+    return response.data;
+  }
+
 }
