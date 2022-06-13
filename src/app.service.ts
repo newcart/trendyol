@@ -5,7 +5,7 @@ import { HttpService } from '@nestjs/axios';
 export class AppService {
   constructor(private httpService: HttpService) {}
   getHello(): string {
-    return 'Hello World!';
+    return 'Trendyol Service is runing... Report from micrpservice by tcpip';
   }
   async testAccount(body): Promise<any> {
     const response = await this.sendToEndpoint('http://trendyol.com/');
