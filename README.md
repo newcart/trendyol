@@ -23,8 +23,14 @@ getCategorySpecValues: Kategoride tanımlı Specslerin değerleri için
 ## productService Metodları
 ```
 getProducts: Ürünleri pazaryerinden okumak için
-postProducts: Pazaryerine ürün kaydetmek için
-putProducts: Pazaryerinde ürün güncellemek için HTTP PUT metodu
+getProduct: Tek bir ürünü pazaryerinden okumak için
+postProduct: Pazaryerine ürün kaydetmek için
+putProduct: Pazaryerinde ürün güncellemek için HTTP PUT metodu
 putProductPrice: Pazaryerinde ürün fiyatı güncellemek için HTTP PUT metodu
 putProductStock: Pazaryerinde ürün adedi güncellemek için HTTP PUT metodu
+```
+## orderService Metodları
+```
+getOrders: Siparişleri pazaryerinden okumak için
+getOrder: Tek bir siparişi pazaryerinden okumak için
 ```
