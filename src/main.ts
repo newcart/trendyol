@@ -6,10 +6,10 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.connectMicroservice({
     transport: Transport.TCP,
-    options: { host: "trendyol.service", port: 30101 },
+    options: { host: "localhost", port: 30101 },
   });
   await app.startAllMicroservices();
-  await app.listen(3002);
+  //await app.listen(3002);
   console.log(`Trendyol Service is running on: `);
 }
 bootstrap();
