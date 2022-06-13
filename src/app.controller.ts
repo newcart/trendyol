@@ -33,6 +33,13 @@ export class AppController {
   /**
    * trendyol api kullanıcı hesabını kontrol için bir get isteği endpointi
    */
+  @MessagePattern('serviceTest')
+  serviceTest(body) {
+    return this.appService.serviceTest(body);
+  }
+  /**
+   * trendyol api kullanıcı hesabını kontrol için bir get isteği endpointi
+   */
   @MessagePattern('testAccount')
   testAccount(body) {
     return this.appService.testAccount(body);

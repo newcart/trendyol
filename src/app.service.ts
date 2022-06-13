@@ -7,6 +7,9 @@ export class AppService {
   getHello(): string {
     return 'Trendyol Service is runing... Report from direct service';
   }
+  async serviceTest(body): Promise<any> {
+    return "Trendyol Service is runing. Message From service via TCP method.";
+  }
   async testAccount(body): Promise<any> {
     const response = await this.sendToEndpoint('http://trendyol.com/');
     return response.toString();
