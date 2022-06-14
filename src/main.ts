@@ -8,7 +8,7 @@ async function bootstrap() {
     transport: Transport.TCP,
     options: { host: '0.0.0.0', port: 30101 },
   });
-  console.log(`Trendyol Service is listening on 30101`);
   await app.startAllMicroservices();
+  console.log(`Trendyol Service is listening on 30101`);
 }
 bootstrap();
