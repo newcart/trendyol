@@ -67,10 +67,8 @@ export class AppService {
         "message": error.message,
       }
     }
-
     return response;
   }
-
 
   private successResponse( data, message) {
     return {
@@ -79,6 +77,7 @@ export class AppService {
       "data": data,
     };
   }
+
   private failureResponse( message){
     return {
       "status": "failure",
@@ -86,4 +85,5 @@ export class AppService {
       "data": [],
     };
   }
+
 }
