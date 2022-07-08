@@ -31,33 +31,49 @@ export class AppController {
     return this.appService.getHello();
   }
   /**
-   * trendyol api kullanıcı hesabını kontrol için bir get isteği endpointi
+   * trendyol microservis test isteği endpointi
    */
   @MessagePattern('serviceTest')
-  serviceTest(body) {
-    return this.appService.serviceTest(body);
+  serviceTest( request ) {
+    return this.appService.serviceTest( request );
   }
   /**
-   * trendyol api kullanıcı hesabını kontrol için bir get isteği endpointi
+   * trendyol api kullanıcı hesabını kontrol için bir endpoint
    */
   @MessagePattern('testAccount')
-  testAccount(body) {
-    return this.appService.testAccount(body);
+  testAccount( request ) {
+    return this.appService.testAccount( request );
   }
   /**
    * pazaryerinden ürün okuma metodu.
+   * @param body içerisinde gelen datalar servise aktarılarak ürün arama işlemi serviste yapılır
+   */
+  @MessagePattern('postProduct')
+  postProduct( request ) {
+    return this.productService.postProduct( request );
+  }
+  /**
+   * pazaryerinden ürünleri okuma metodu.
    * @param body içerisinde gelen datalar servise aktarılarak ürün arama işlemi serviste yapılıri
    */
-  @MessagePattern('getProduct')
-  getProduct(body) {
-    return this.productService.getProduct(body);
+  @MessagePattern('postProducts')
+  postProducts( request ) {
+    return this.productService.postProducts( request );
+  }
+  /**
+   * pazaryerinürün kaydetme metodu.
+   * @param body içerisinde gelen datalar servise aktarılarak ürün arama işlemi serviste yapılıri
+   */
+  @MessagePattern('postProductsSave')
+  postProductsSave( request ) {
+    return this.productService.postProductsSave( request );
   }
   /**
    * pazaryerinden sipariş alma metodu.
    * @param body içerisinde gelen datalar servise aktarılarak ürün arama işlemi serviste yapılıri
    */
   @MessagePattern('getOrder')
-  getOrder(body) {
-    return this.orderService.getOrder(body);
+  getOrder( request ) {
+    return this.orderService.getOrder( request );
   }
 }
